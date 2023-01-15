@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Events List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="search"></ion-searchbar>
+
+  <ion-list>
+    <ion-item>
+      <h4 style="color: var(--ion-color-primary)">Type of event</h4><br>
+      <h4 slot="end" style="color: var(--ion-color-primary)">&nbsp;Date and time</h4>
+    </ion-item>
+    <ion-item *ngFor="let obj of event" [routerLink]="['/detail-event']" (click)="getEvenement(obj.id)">
+      <h4>{{obj.type}}</h4><br>
+      <h4 slot="end">&nbsp;{{obj.datetime_utc}}</h4>
+    </ion-item>
+  </ion-list>
+</ion-content>

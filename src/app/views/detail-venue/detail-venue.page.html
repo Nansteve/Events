@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot ="start">
+      <ion-button [routerLink]="['/tabs/venue-list']">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title>Detail Venues</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <h4 textcolo>Id</h4>
+      <h4 class="espace">{{venue.id}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4 color="primary">name</h4>
+      <h4  style="margin-left: 4rem;">{{venue.name}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4 color="primary" >city</h4>
+      <h4 class="espace">{{venue.city}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4 color="primary">address</h4>
+      <h4 style="margin-left: 4rem;">{{venue.address}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4 color="primary">location</h4>
+      <h4 style="margin-left: 4rem;">{{venue.display_location}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4 color="primary">time zone</h4>
+      <h4 style="margin-left: 3rem;">{{venue.timezone}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4 color="primary">url</h4>
+      <h4 class="espace">{{venue.url}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4 color="primary">Metro code</h4>
+      <h4 style="margin-left: 3rem;">{{venue.metro_code}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4 color="primary">Postal code</h4>
+      <h4 style="margin-left: 3rem;">{{venue.postal_code}}</h4>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

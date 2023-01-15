@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot ="start">
+      <ion-button [routerLink]="['/tabs/event-list']">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title>Detail Events</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item color="">
+      <h4 class="id">id</h4>
+      <h4 class="espace">{{event.id}}</h4>
+    </ion-item>
+    <ion-item color="">
+      <h4 >type</h4>
+      <h4 class="espace">{{event.type}}</h4>
+    </ion-item>
+    <ion-item color="">
+      <h4 >Title</h4>
+      <h4 class="espace">{{event.short_title}}</h4>
+    </ion-item>
+    <ion-item color="">
+      <h4>created_at</h4>
+      <h4  style="margin-left: 2rem;">{{event.created_at}}</h4>
+    </ion-item>
+
+    <ion-item color="">
+      <h4 >local datetime</h4>
+      <h4 class="ren">{{event.datetime_local}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4>Announced date</h4>
+      <h4 class="ren">{{event.announce_date}}</h4>
+    </ion-item>
+    <ion-item>
+      <h4>url</h4>
+      <h4 class="espace">{{event.url}}</h4>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Venue List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="search"></ion-searchbar>
+  <ion-list>
+    <ion-item>
+      <h4 style="color: var(--ion-color-primary)">Name of venue</h4><br>
+      <h4 slot="end" style="color: var(--ion-color-primary)">&nbsp;Country</h4>
+    </ion-item>
+    <ion-item *ngFor="let obj of venues" [routerLink]="['/detail-venue']" (click)="getVenue(obj.id)">
+      <h4 >&nbsp;{{obj.name}}</h4>
+      <h4 slot="end">{{obj.country}}</h4><br>
+    </ion-item>
+  </ion-list>
+</ion-content>
